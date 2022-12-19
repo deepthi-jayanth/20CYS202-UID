@@ -218,6 +218,10 @@
             <label for="lname"> Last Name<span>*</span></label>
             <input id="lname" type="text" name="lname" placeholder="Enter your last name" required/>
           </div>
+           <div class="item">
+            <label for="psw">Password<span>*</span></label>
+            <input id="psw" type="password" name="psw" placeholder="Enter your password" required/>
+          </div>
          
           
           <div class="item">
@@ -276,8 +280,8 @@
 
          
           <div class="item">
-            <label for="eaddress">Email Address<span>*</span></label>
-            <input id="eaddress" type="text" placeholder="Enter your email address"    name="eaddress" required/>
+            <label for="email">Email Address<span>*</span></label>
+            <input id="email" type="text" placeholder="Enter your email address"    name="email" required/>
           </div>
           <div class="item">
             <label for="phone">Mobile<span>*</span></label>
@@ -464,6 +468,32 @@
             alert("Speacial charater present in Fisrt Name please remove it")
         }
     }
+        function validatePhoneno() {
+      let phone = document.getElementById("phone").value;
+      if(!(phone.length==10))
+{
+window.alert("Enter valid phone no.");
+document.getElementById("phone").focus()
+}
+}
+function validatePassword() {
+	let pwd = document.getElementById("psw").value;
+                 var pass= "^(?=.[a-z])(?=.[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$";
+if(!pwd.match(pass))
+{
+window.alert("Enter strong password");
+document.getElementById("psw").focus()
+}
+}
+
+function validateEmail() {
+     var maill= /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+    var mail = document.getElementById("email").value;
+    if (!mail.match(maill)) {
+        alert("Please enter a valid email address");
+        document.getElementById("email").focus()
+    }
+}
 
 
 }
