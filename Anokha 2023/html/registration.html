@@ -220,7 +220,7 @@
           </div>
            <div class="item">
             <label for="psw">Password<span>*</span></label>
-            <input id="psw" type="password" name="psw" placeholder="Enter your password" required/>
+            <input id="psw" type="password" name="psw" placeholder="Enter your password" onchange="validatePassword()" required/>
           </div>
          
           
@@ -281,11 +281,11 @@
          
           <div class="item">
             <label for="email">Email Address<span>*</span></label>
-            <input id="email" type="text" placeholder="Enter your email address"    name="email" required/>
+            <input id="email" type="text" placeholder="Enter your email address"    name="email" onchange="validateEmail()" required/>
           </div>
           <div class="item">
             <label for="phone">Mobile<span>*</span></label>
-            <input id="phone" type="tel"   name="phone" placeholder="Enter your mobile no."  required/>
+            <input id="phone" type="tel"   name="phone" placeholder="Enter your mobile no." onchange="validatePhoneno()"  required/>
           </div>
          
           <div class="item">
