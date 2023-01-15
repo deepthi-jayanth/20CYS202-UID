@@ -1,0 +1,443 @@
+<!--
+Authors:  Deepthi Jayanth
+Created Date: 15 Dec 2022
+Updated Date: 14 Jan 2023
+Description: Home Page which contains a timeline and a nav-bar(menu) that directs you to next pages.
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Anokha 2023</title>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&family=Cinzel:wght@500&family=Hind:wght@300&family=Luxurious+Roman&family=Poor+Story&family=Roboto+Slab&display=swap');
+
+  body {
+    background-image: url('images/pinky1.jpg');
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: left;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 40px;
+
+
+  }
+
+  .logo {
+    position: absolute;
+    top: 1%;
+    right: 80%;
+    transform: translate(0%, 0%);
+    margin-right: 0%;
+
+  }
+
+
+
+  .timer {
+    text-align: center;
+    font-size: 70px;
+    margin-top: 0px;
+    color: white;
+    transform: translate(2%, 180%);
+    /* top: 10%;
+  right: 80%; */
+  }
+
+  .txt {
+    font-size: 50px;
+    font-family: 'Cinzel', serif;
+    transform: translate(10%, -150%);
+    color: black;
+
+  }
+
+  .txt1 {
+    font-size: 30px;
+    font-family: 'Cinzel', serif;
+    transform: translate(10%, -250%);
+    color: black;
+  }
+
+  .txt2 {
+    font-size: 20px;
+    font-family: 'Cinzel', serif;
+    transform: translate(11%, -270%);
+    color: black;
+  }
+
+  .heading {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-family: 'Nunito', sans-serif;
+
+    padding: 0%;
+  }
+
+  .heading p {
+    position: absolute;
+  }
+
+  .nav-right {
+    margin-left: 60%;
+    margin-top: 2%;
+    font-family: 'Hind', sans-serif;
+    font-size: 24px;
+  }
+
+  .nav-right a:hover {
+    color: rgb(190, 14, 134);
+  }
+
+  .inlinks {
+    text-decoration: none !important;
+    color: grey;
+  }
+
+  /* .insta {
+    position: absolute;
+    top: 29%;
+    left: 2%;
+  }
+  .linkedin {
+    position: absolute;
+    top: 42%;
+    left: 2%;
+  }
+  .github {
+    position: absolute;
+    top: 55%;
+    left: 2%;
+  } */
+
+  .module {
+    max-width: 700px;
+    max-height: 400px;
+    padding: 1rem;
+    color: black;
+    border-width: 3px;
+    border-style: solid;
+    border-image:
+      linear-gradient(to bottom,
+        rgb(190, 14, 134),
+        rgba(0, 0, 0, 0)) 1 100%;
+  }
+
+  .site-footer {
+    background-color: #26272b;
+    padding: 25px 0 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #737373;
+    margin-top: 20%;
+  }
+
+  .site-footer hr {
+    border-top-color: #bbb;
+    opacity: 0.5
+  }
+
+  .site-footer hr.small {
+    margin: 20px 0
+  }
+
+  .site-footer h6 {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 2px
+  }
+
+  .site-footer a {
+    color: #737373;
+  }
+
+  .site-footer a:hover {
+    color: #3366cc;
+    text-decoration: none;
+  }
+
+  .footer-links {
+    padding-left: 0;
+    list-style: none
+  }
+
+  .footer-links li {
+    display: block
+  }
+
+  .footer-links a {
+    color: #737373
+  }
+
+  .footer-links a:active,
+  .footer-links a:focus,
+  .footer-links a:hover {
+    color: #3366cc;
+    text-decoration: none;
+  }
+
+  .footer-links.inline li {
+    display: inline-block
+  }
+
+  .site-footer .social-icons {
+    text-align: right
+  }
+
+  .site-footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    margin-right: 0;
+    border-radius: 100%;
+    background-color: #33353d
+  }
+
+  .copyright-text {
+    margin: 0
+  }
+
+  @media (max-width:991px) {
+    .site-footer [class^=col-] {
+      margin-bottom: 30px
+    }
+  }
+
+  @media (max-width:767px) {
+    .site-footer {
+      padding-bottom: 0
+    }
+
+    .site-footer .copyright-text,
+    .site-footer .social-icons {
+      text-align: center
+    }
+  }
+
+  .social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none
+  }
+
+  .social-icons li {
+    display: inline-block;
+    margin-bottom: 4px
+  }
+
+  .social-icons li.title {
+    margin-right: 15px;
+    text-transform: uppercase;
+    color: #96a2b2;
+    font-weight: 700;
+    font-size: 13px
+  }
+
+  .social-icons a {
+    background-color: #eceeef;
+    color: #818a91;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear
+  }
+
+  .social-icons a:active,
+  .social-icons a:focus,
+  .social-icons a:hover {
+    color: #fff;
+    background-color: #29aafe
+  }
+
+  .social-icons.size-sm a {
+    line-height: 34px;
+    height: 34px;
+    width: 34px;
+    font-size: 14px
+  }
+
+  .social-icons a.facebook:hover {
+    background-color: #3b5998
+  }
+
+  .social-icons a.twitter:hover {
+    background-color: #00aced
+  }
+
+  .social-icons a.linkedin:hover {
+    background-color: #007bb6
+  }
+
+  .social-icons a.instagram:hover {
+    background-color: #ea4c89
+  }
+
+  @media (max-width:767px) {
+    .social-icons li.title {
+      display: block;
+      margin-right: 0;
+      font-weight: 600
+    }
+  }
+</style>
+
+<body>
+  <div class="heading">
+    <div class="nav-right">
+      <p> <b>
+          <a class="inlinks" href="index.html">HOME &nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <a class="inlinks" href="html/events.html">EVENTS&nbsp;&nbsp;&nbsp;&nbsp; </a>
+          <a class="inlinks" href="html/registration.html">REGISTER
+            &nbsp;&nbsp;&nbsp;&nbsp; </a>
+
+          <a class="inlinks" href="html/gallery.html">GALLERY&nbsp;&nbsp;&nbsp;&nbsp; </a>
+          <a class="inlinks" href="html/contact.html">CONTACT</a> </b> </p>
+
+
+
+    </div>
+
+  </div>
+
+  <div class="module" style="margin-left: 8%; margin-top: 15%;">
+    <div class="timer">
+      <p id="demo"></p>
+    </div>
+    <div class="logo"> <img src="images/amrita_logo1.jpg" height="90px" width="250px"></div>
+    <div class="txt">
+      <p> <b>Anokha - 2023</b></p>
+    </div>
+    <div class="txt1">
+      <p>12th National Level Techfest</p>
+
+    </div>
+    <div class="txt2">
+      <p> STARTS IN: </p>
+
+    </div>
+  </div>
+
+</body>
+
+<!-- Site footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6>About</h6>
+        <div class="text-justify">
+          <p>Amrita Vishwa Vidyapeetham is a multi-disciplinary, research-intensive, private university, educating a
+            vibrant student population of over 24,000 by 1700+ strong faculty. Accredited with the highest possible
+            ‘A++’ grade by NAAC, Amrita offers more than 250 UG, PG, and Ph.D. programs in Engineering, Management, and
+            Medical Sciences including Ayurveda, Life Sciences, Physical Sciences, Agriculture Sciences, Arts &
+            Humanities, and Social & Behavioral Sciences.
+
+          </p>
+        </div>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Campuses</h6>
+        <ul class="footer-links">
+          <li><a href="https://www.amrita.edu/campus/amaravati/" target="_blank">Amaravti</a></li>
+          <li><a href="https://www.amrita.edu/campus/amritapuri/" target="_blank">Amritapuri</a></li>
+          <li><a href="https://www.amrita.edu/campus/bengaluru/" target="_blank">Bengaluru</a></li>
+          <li><a href="https://www.amrita.edu/campus/chennai/" target="_blank">Chennai</a></li>
+          <li><a href="https://www.amrita.edu/campus/coimbatore/" target="_blank">Coimbatore</a></li>
+          <li><a href="https://www.amrita.edu/campus/kochi/" target="_blank">Kochi</a></li>
+          <li><a href="https://www.amrita.edu/campus/mysuru/" target="_blank">Mysuru</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="https://www.amrita.edu/" target="_blank">About Us</a></li>
+          <li><a href="https://www.amrita.edu/contact/" target="_blank">Contact Us</a></li>
+
+
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright © 2022 - TIFAC-CORE in Cyber Security.
+          Design by Deepthi J B.Tech CSE (CYS)<br>
+          Part of 20CYS202 - User Interface Design
+          Amrita Vishwa Vidyapeetham, Coimbatore
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-icons">
+          <li><a class="facebook" href="https://www.facebook.com/anokha.amrita/" target="_blank"><i
+                class="fa fa-facebook"></i></a></li>
+          <li><a class="twitter" href="https://twitter.com/anokha_techfest?lang=en" target="_blank"><i
+                class="fa fa-twitter"></i></a></li>
+          <li><a class="instagram" href="https://www.instagram.com/anokhatechfest/?hl=en" target="_blank"><i
+                class="fa fa-instagram"></i></a></li>
+          <li><a class="linkedin" href="https://www.linkedin.com/school/anokha-amrita/about/" target="_blank"><i
+                class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("April 1, 2023 09:00:00").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function () {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+</script>
+
+
+</html>
